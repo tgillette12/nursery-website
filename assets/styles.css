@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7faf6;
+  color: #2c3a2c;
+  line-height: 1.7;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  padding: 1.2rem 2.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+header img {
+  height: 50px;
+}
+
+nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #2c3a2c;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+nav a:hover {
+  color: #4b7b4b;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.05);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-overlay p {
+  max-width: 720px;
+  font-size: 1.05rem;
+  color: #eef5ec;
+}
+
+/* Opening Banner */
+.opening-banner {
+  background: #2f4f3a;
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* Doors */
+.doors {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.door-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  text-decoration: none;
+  color: inherit;
+}
+
+.door-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.door-card:hover img {
+  transform: scale(1.05);
+}
+
+.door-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.25));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  color: white;
+}
+
+.door-overlay h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.door-overlay p {
+  font-size: 0.95rem;
+}
+
+/* Page Content */
+.page-content {
+  padding: 8rem 2rem 3rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.coming-soon {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background: #2c3a2c;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 4rem;
+}
+
+/* Fade In */
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.3rem;
+  }
+}
