@@ -198,3 +198,73 @@ footer {
     font-size: 2.3rem;
   }
 }
+/* ===============================
+   Inventory Pages
+================================ */
+
+.inventory-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+}
+
+.inventory-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.inventory-subtitle {
+  color: #556b55;
+  margin-bottom: 3rem;
+}
+
+/* Grid */
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Card */
+.plant-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+}
+
+.plant-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.plant-info {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plant-info h2 {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.price {
+  font-weight: 600;
+  color: #2f5d3a;
+}
+
+/* Active Nav */
+nav a.active {
+  color: #2f5d3a;
+  font-weight: 600;
+}
