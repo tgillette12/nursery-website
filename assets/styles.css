@@ -268,3 +268,90 @@ nav a.active {
   color: #2f5d3a;
   font-weight: 600;
 }
+/* ===============================
+   Mobile Optimization (QR Users)
+================================ */
+
+@media (max-width: 768px) {
+
+  /* Base text */
+  body {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  /* Header */
+  header {
+    padding: 0.75rem 1.25rem;
+  }
+
+  header img {
+    height: 42px;
+  }
+
+  nav a {
+    margin-left: 16px;
+    font-size: 0.95rem;
+  }
+
+  /* Page content spacing */
+  .page-content,
+  .inventory-page {
+    padding: 6rem 1.25rem 2.5rem;
+  }
+
+  .inventory-page h1 {
+    font-size: 2rem;
+  }
+
+  .inventory-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Plant grid: tighter + scannable */
+  .plant-grid {
+    gap: 1.5rem;
+  }
+
+  .plant-card img {
+    height: 200px;
+  }
+
+  .plant-info {
+    padding: 0.9rem 1.1rem;
+  }
+
+  .plant-info h2 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  /* Hero text */
+  .hero-overlay h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .hero-overlay p {
+    font-size: 0.95rem;
+  }
+
+  /* Doors (home page cards) */
+  .door-card img {
+    height: 260px;
+  }
+
+  .door-overlay h2 {
+    font-size: 1.4rem;
+  }
+
+  .door-overlay p {
+    font-size: 0.9rem;
+  }
+
+}
