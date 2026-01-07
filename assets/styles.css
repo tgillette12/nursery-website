@@ -61,28 +61,28 @@ nav a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35));
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.45)
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
-  color: white;
+  color: #f3f6f2;
 }
 
+
 .hero-overlay h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
+  color: #f3f6f2;
 }
 
 .hero-overlay p {
-  max-width: 720px;
-  font-size: 1.05rem;
-  color: #eef5ec;
+  color: #e6eee3;
 }
+
 
 /* Opening Banner */
 .opening-banner {
