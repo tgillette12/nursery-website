@@ -355,3 +355,30 @@ nav a.active {
   }
 
 }
+/* ===============================
+   Mobile Hero Height Fix
+================================ */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 65vh; /* was 100vh */
+  }
+
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+}
+
