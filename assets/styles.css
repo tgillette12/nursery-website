@@ -355,6 +355,41 @@ nav a.active {
   }
 
 }
+/* AERIAL SECTION */
+.aerial-section {
+  max-width: 900px;          /* narrower than hero */
+  margin: 3.5rem auto;
+  padding: 0 1rem;
+}
+
+.aerial-section img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.14);
+}
+
+.aerial-caption {
+  margin-top: 1rem;
+  text-align: center;
+  color: #1f3d2b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .aerial-section {
+    max-width: 100%;
+    margin: 2rem auto;
+  }
+
+  .aerial-caption {
+    font-size: 0.9rem;
+  }
+}
+
 /* ===============================
    Mobile Hero Height Fix
 ================================ */
