@@ -9,15 +9,26 @@
 
 <header>
   <img src="assets/logo.jpg" alt="Chester Nursery Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="plants-1-gallon.html">1 Gallon</a>
-    <a href="plants-3-gallon.html" class="active">3 Gallon</a>
-    <a href="plants-7-gallon.html">7 Gallon</a>
-    <a href="plants-15-gallon.html">15 Gallon</a>
-    <a href="plants-30-gallon.html">30 Gallon</a>
-    <a href="plants-large.html">45+ / Trees</a>
-  </nav>
+  <nav class="nav-menu">
+  <a href="index.html">Home</a>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">
+      Availability ▾
+    </button>
+    <div class="dropdown-menu">
+      <a href="plants-1-gallon.html">1 Gallon</a>
+      <a href="plants-3-gallon.html">3 Gallon</a>
+      <a href="plants-7-gallon.html">7 Gallon</a>
+      <a href="plants-15-gallon.html">15 Gallon</a>
+      <a href="plants-30-gallon.html">30 Gallon</a>
+      <a href="plants-large.html">45+ / Trees</a>
+    </div>
+  </div>
+
+  <a href="#" onclick="openContractorPricing()">Contractor Pricing</a>
+</nav>
+
 </header>
 
 <main class="inventory-page">
@@ -86,6 +97,16 @@
 <footer>
   © 2026 Chester Nursery
 </footer>
+<script>
+  function openContractorPricing() {
+    const password = prompt("Enter contractor access code:");
+    if (password === "Chesternursery32097") {
+      window.location.href = "contractor-pricing.html";
+    } else if (password !== null) {
+      alert("Incorrect password.");
+    }
+  }
+</script>
 
 </body>
 </html>
