@@ -497,4 +497,95 @@ nav a.active {
   }
 
 }
+.aerial-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  position: relative;
+}
+
+.aerial-section img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.aerial-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.35);
+  border-radius: 16px;
+}
+
+.coming-soon {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.sourcing-note {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #2c3a2c;
+}
+/* Homepage bottom links */
+.home-links {
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.home-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.home-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.6)
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.home-card-overlay h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.home-card-overlay p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-card img {
+    height: 240px;
+  }
+}
 

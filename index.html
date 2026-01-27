@@ -19,42 +19,44 @@
   <a href="index.html">Home</a>
 
   <div class="dropdown">
-    <button class="dropdown-toggle" type="button">
-      Availability ▾
-    </button>
+    <button class="dropdown-toggle">Stock Plants</button>
     <div class="dropdown-menu">
       <a href="plants-1-gallon.html">1 Gallon</a>
       <a href="plants-3-gallon.html">3 Gallon</a>
       <a href="plants-7-gallon.html">7 Gallon</a>
       <a href="plants-15-gallon.html">15 Gallon</a>
       <a href="plants-30-gallon.html">30 Gallon</a>
-      <a href="plants-large.html">45+ / Trees</a>
+      <a href="plants-large.html">Specimen & Trees</a>
     </div>
   </div>
 
-  <a href="#" onclick="openContractorPricing()">Contractor Pricing</a>
+  <a href="about.html">About Us</a>
+
+  <a href="#" class="contractor-link" onclick="openContractorPricing()">
+    Contractor Pricing
+  </a>
 </nav>
+
 
 
 </header>
 
-<section class="hero">
-  <img src="assets/hero.png" alt="Nursery Plants" class="hero-image">
-  <div class="hero-overlay fade-in">
-    <h1>Grow With Chester Nursery</h1>
-    <p>
-  Opening January… Specimen plants for all users… Contractor pricing and
-  trailer-friendly parking and pickup.
-  <br><br>
-  We offer 1-gallon to 100-gallon plants along with B&amp;B trees and palm trees.
-  Semi-tropical plants coming in early spring.
-</p>
+<section class="aerial-section">
+  <img src="assets/aerial.jpg" alt="Chester Nursery Aerial View">
 
+  <div class="aerial-overlay">
+    <h1>Grow With Chester Nursery</h1>
+    <p class="coming-soon">Coming Soon</p>
+    <p>Opening February</p>
+    <p>
+      Specimen plants for all users. Contractor pricing and
+      trailer-friendly parking and pickup.
+    </p>
   </div>
 </section>
 <!-- AERIAL (NEW, BELOW HERO) -->
 <section class="aerial-section">
-  <img src="assets/aerial.jpg" alt="Chester Nursery Aerial View">
+
   <div class="aerial-caption">
     Our growing facility — designed for easy access, trailer-friendly pickup, and large specimen inventory.
   </div>
@@ -65,6 +67,26 @@
     🌱 Opening January — High-quality plants for every backyard.
   </p>
 </section>
+<section class="home-links">
+
+  <a href="plants-1-gallon.html" class="home-card">
+    <img src="assets/specimen-plants.jpg" alt="Specimen Plants and Trees">
+    <div class="home-card-overlay">
+      <h2>Specimen Plants & Trees</h2>
+      <p>View available plant sizes and varieties</p>
+    </div>
+  </a>
+
+  <a href="#" class="home-card">
+    <img src="assets/mulch-pine-straw.jpg" alt="Mulch and Pine Straw">
+    <div class="home-card-overlay">
+      <h2>Mulch & Pine Straw</h2>
+      <p>Product details coming soon</p>
+    </div>
+  </a>
+
+</section>
+
 <h2 style="text-align:center; margin:4rem 0 2rem; font-family:'Playfair Display', serif;">
   Explore Our Inventory
 </h2>
@@ -107,7 +129,7 @@
 <script>
   function openContractorPricing() {
     const password = prompt("Enter contractor access code:");
-    if (password === "Chesternursery32097") {
+    if (password === "96132") {
       window.location.href = "contractor-pricing.html";
     } else if (password !== null) {
       alert("Incorrect password.");
