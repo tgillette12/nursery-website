@@ -588,4 +588,7 @@ nav a.active {
     height: 240px;
   }
 }
+.page-content {
+  padding-top: 140px;
+}
 
