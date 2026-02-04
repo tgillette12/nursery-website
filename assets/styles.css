@@ -591,4 +591,11 @@ nav a.active {
 .page-content {
   padding-top: 140px;
 }
+/* Prevent fixed header from covering page titles */
+main {
+  padding-top: 140px;
+}
+.sourcing-note {
+  margin-bottom: 4rem;
+}
 
