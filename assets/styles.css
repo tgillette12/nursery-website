@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap');
 
-/* Reset */
+/* ===============================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base */
+/* ===============================
+   BASE
+================================ */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f7faf6;
@@ -15,7 +19,9 @@ body {
   line-height: 1.7;
 }
 
-/* Header */
+/* ===============================
+   HEADER
+================================ */
 header {
   position: absolute;
   top: 0;
@@ -44,7 +50,10 @@ nav a {
 nav a:hover {
   color: #4b7b4b;
 }
-/* Navigation Dropdown */
+
+/* ===============================
+   NAV DROPDOWN
+================================ */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -63,62 +72,25 @@ nav a:hover {
   font-weight: 500;
   color: #2c3a2c;
   cursor: pointer;
-  letter-spacing: 0.02em;
 }
 
-.dropdown-toggle:hover {
-  color: #4b7b4b;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  min-width: 180px;
-  padding: 0.5rem 0;
-  display: none;
-  z-index: 999;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 0.6rem 1.2rem;
-  text-decoration: none;
-  color: #2c3a2c;
-  font-size: 0.95rem;
-}
-
-.dropdown-menu a:hover {
-  background: #f2f6f2;
-  color: #2f5d3a;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 .dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   min-width: 180px;
   display: none;
   z-index: 9999;
-  pointer-events: auto;
 }
-.dropdown {
-  position: relative;
-}
+
 .dropdown-menu a {
   display: block;
   padding: 0.75rem 1rem;
-  color: #1f3d2b;
   text-decoration: none;
+  color: #1f3d2b;
   font-weight: 500;
 }
 
@@ -126,199 +98,143 @@ nav a:hover {
   background: #f4f7f5;
 }
 
-/* Hero */
-.hero {
-  position: relative;
-  height: 100vh;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9) contrast(1.05);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.45)
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* ===============================
+   HERO / AERIAL
+================================ */
+/* AERIAL SECTION */
+.aerial-section {
+  max-width: 1200px;
+  margin: 3rem auto 1rem auto;
+  padding: 0 1.5rem;
   text-align: center;
-  padding: 2rem;
-  color: #f3f6f2;
+}
+
+.aerial-section img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.aerial-caption {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f3d2b;
 }
 
 
-.hero-overlay h1 {
-  color: #f3f6f2;
+.coming-soon {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
-.hero-overlay p {
-  color: #e6eee3;
-}
-
-
-/* Opening Banner */
+/* ===============================
+   OPENING BANNER
+================================ */
 .opening-banner {
   background: #2f4f3a;
   color: white;
   text-align: center;
   padding: 1.25rem;
-  letter-spacing: 0.05em;
 }
 
-/* Doors */
-.doors {
+/* ===============================
+   BOTTOM 3 SECTION (NEW CLEAN VERSION)
+================================ */
+/* ===============================
+   Bottom Homepage Pricing Cards
+================================ */
+
+.home-links {
   max-width: 1200px;
   margin: 4rem auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.door-card {
+.home-card {
   position: relative;
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   text-decoration: none;
-  color: inherit;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  display: block;
 }
 
-.door-card img {
+.home-card img {
   width: 100%;
-  height: 360px;
+  height: 340px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  display: block;
 }
 
-.door-card:hover img {
-  transform: scale(1.05);
-}
-
-.door-overlay {
+.home-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.25));
+  background: linear-gradient(
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.65)
+  );
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem;
-  color: white;
+  padding: 1.75rem;
 }
 
-.door-overlay h2 {
+.home-card-overlay h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
-.door-overlay p {
-  font-size: 0.95rem;
+.home-card-overlay p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-/* Page Content */
-.page-content {
-  padding: 8rem 2rem 3rem;
-  max-width: 1000px;
-  margin: auto;
-}
 
-.page-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-}
-
-.coming-soon {
-  margin-top: 2rem;
-  font-style: italic;
-}
-
-/* Footer */
+/* ===============================
+   FOOTER
+================================ */
 footer {
   background: #2c3a2c;
   color: white;
   text-align: center;
   padding: 2.5rem 1rem;
-  margin-top: 4rem;
 }
 
-/* Fade In */
-.fade-in {
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .hero-overlay h1 {
-    font-size: 2.3rem;
-  }
-}
 /* ===============================
-   Inventory Pages
+   INVENTORY PAGES (KEEPING)
 ================================ */
-
 .inventory-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 8rem 2rem 4rem;
 }
 
-.inventory-page h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.inventory-subtitle {
-  color: #556b55;
-  margin-bottom: 3rem;
-}
-
-/* Grid */
 .plant-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.5rem;
 }
 
-/* Card */
 .plant-card {
   background: white;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .plant-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
 }
 
 .plant-card img {
@@ -334,40 +250,20 @@ footer {
   align-items: center;
 }
 
-.plant-info h2 {
-  font-size: 1.05rem;
-  font-weight: 500;
-}
-
 .price {
   font-weight: 600;
   color: #2f5d3a;
 }
 
-/* Active Nav */
-nav a.active {
-  color: #2f5d3a;
-  font-weight: 600;
-}
 /* ===============================
-   Mobile Optimization (QR Users)
+   MOBILE
 ================================ */
-
 @media (max-width: 768px) {
 
-  /* Base text */
-  body {
-    font-size: 16px;
-    line-height: 1.45;
-  }
-
-  /* Header */
   header {
-    padding: 0.75rem 1.25rem;
-  }
-
-  header img {
-    height: 42px;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
   }
 
   nav a {
@@ -375,227 +271,187 @@ nav a.active {
     font-size: 0.95rem;
   }
 
-  /* Page content spacing */
-  .page-content,
-  .inventory-page {
-    padding: 6rem 1.25rem 2.5rem;
-  }
-
-  .inventory-page h1 {
-    font-size: 2rem;
-  }
-
-  .inventory-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Plant grid: tighter + scannable */
-  .plant-grid {
-    gap: 1.5rem;
-  }
-
-  .plant-card img {
-    height: 200px;
-  }
-
-  .plant-info {
-    padding: 0.9rem 1.1rem;
-  }
-
-  .plant-info h2 {
-    font-size: 1rem;
-    line-height: 1.3;
-  }
-
-  .price {
-    font-size: 1.1rem;
-  }
-
-  /* Hero text */
-  .hero-overlay h1 {
-    font-size: 2.1rem;
-    line-height: 1.2;
-  }
-
-  .hero-overlay p {
-    font-size: 0.95rem;
-  }
-
-  /* Doors (home page cards) */
-  .door-card img {
+  .home-card img {
     height: 260px;
   }
 
-  .door-overlay h2 {
+  .home-card-overlay h2 {
     font-size: 1.4rem;
   }
 
-  .door-overlay p {
-    font-size: 0.9rem;
-  }
-
 }
-/* AERIAL SECTION */
-.aerial-section {
-  max-width: 900px;          /* narrower than hero */
-  margin: 3.5rem auto;
-  padding: 0 1rem;
-}
-
-.aerial-section img {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-  box-shadow: 0 18px 35px rgba(0,0,0,0.14);
-}
-
-.aerial-caption {
-  margin-top: 1rem;
-  text-align: center;
-  color: #1f3d2b;
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-/* Mobile tuning */
-@media (max-width: 768px) {
-  .aerial-section {
-    max-width: 100%;
-    margin: 2rem auto;
-  }
-
-  .aerial-caption {
-    font-size: 0.9rem;
-  }
-}
-
 /* ===============================
-   Mobile Hero Height Fix
+   Bottom Feature Cards
 ================================ */
 
-@media (max-width: 768px) {
-
-  .hero {
-    height: 65vh; /* was 100vh */
-  }
-
-  .hero-overlay {
-    padding: 1.5rem;
-  }
-
-  .hero-overlay h1 {
-    font-size: 2rem;
-    line-height: 1.15;
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-overlay p {
-    font-size: 0.95rem;
-    line-height: 1.45;
-  }
-
-}
-.aerial-section {
+.bottom-features {
   max-width: 1200px;
-  margin: 3rem auto;
-  position: relative;
-}
-
-.aerial-section img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.aerial-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.35);
-  border-radius: 16px;
-}
-
-.coming-soon {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-.sourcing-note {
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 1.05rem;
-  color: #2c3a2c;
-}
-/* Homepage bottom links */
-.home-links {
-  max-width: 1200px;
-  margin: 4rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  margin: 5rem auto;
   padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
-.home-card {
+.feature-card {
   position: relative;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  text-decoration: none;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
 }
 
-.home-card img {
+.feature-card img {
   width: 100%;
-  height: 320px;
+  height: 380px;
   object-fit: cover;
   display: block;
 }
 
-.home-card-overlay {
+.feature-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.6)
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.7)
   );
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.5rem;
+  padding: 2rem;
+  color: white;
 }
 
-.home-card-overlay h2 {
-  margin: 0;
-  font-size: 1.6rem;
+.feature-overlay h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
 }
 
-.home-card-overlay p {
-  margin-top: 0.4rem;
-  font-size: 1rem;
-  opacity: 0.95;
+.feature-button {
+  display: inline-block;
+  background: white;
+  color: #1f3d2b;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.feature-button:hover {
+  background: #e9f2ea;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .home-card img {
-    height: 240px;
+  .feature-card img {
+    height: 260px;
   }
 }
-.page-content {
-  padding-top: 140px;
-}
-/* Prevent fixed header from covering page titles */
-main {
-  padding-top: 140px;
-}
-.sourcing-note {
-  margin-bottom: 4rem;
+/* Header contact block */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #2c3a2c;
+  font-weight: 600;
+}
+
+.address {
+  color: #4b5f4b;
+  font-weight: 500;
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .contact-info {
+    font-size: 0.85rem;
+  }
+}
+/* =========================
+   Contractor Pricing Page
+========================= */
+
+.pricing-page {
+  max-width: 900px;
+  margin: 6rem auto 6rem auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.pricing-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1f2f1f;
+}
+
+.pricing-subtext {
+  margin-bottom: 3rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.pricing-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #2c3a2c;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.pricing-button:hover {
+  background-color: #3e523e;
+  transform: translateY(-2px);
+}
+/* ===============================
+   Pricing Pages (Retail + Contractor)
+================================ */
+
+.pricing-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 180px 2rem 100px;
+  text-align: center;
+}
+
+.pricing-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-page p {
+  margin-bottom: 2.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.pricing-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #2c3a2c;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.pricing-button:hover {
+  background-color: #3f5c3f;
+  transform: translateY(-2px);
+}
