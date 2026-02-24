@@ -455,3 +455,62 @@ footer {
   background-color: #3f5c3f;
   transform: translateY(-2px);
 }
+/* ===============================
+   Hero Image Styling
+================================ */
+
+.hero-section {
+  max-width: 1200px;
+  margin: 120px auto 60px;
+  padding: 0 2rem;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+  display: block;
+}
+/* ===============================
+   Hero Section Cleanup
+================================ */
+
+.hero-section {
+    max-width: 1200px;
+    margin: 120px auto 80px;
+    padding: 0 2rem;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero-content .status {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2c3a2c;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;          /* THIS centers the whole text block */
+    text-align: center;      /* THIS centers the text inside */
+}
